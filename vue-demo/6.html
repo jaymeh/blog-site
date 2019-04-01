@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>6 - Dynamic Message</title>
+
+        <!-- development version, includes helpful console warnings -->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+    	<div id="app-6">
+            <p>{{ message }}</p>
+            <input v-model="message">
+        </div>
+
+		<script>
+        	var app6 = new Vue({
+                el: '#app-6',
+                data: {
+                    message: 'Hello Vue!'
+                }
+            })
+        </script>
+    </body>
+</html>
