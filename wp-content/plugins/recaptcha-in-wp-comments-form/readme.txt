@@ -3,8 +3,8 @@ Author: jmviade
 Contributors: jmviade
 Tags: reCAPTCHA, comments antispam, antispam, comments reCAPTCHA, antispam protection, google reCAPTCHA, comments form, secure form, security, antispam RTL, RTL Language Support
 Requires at least: 4.0.0
-Tested up to: 4.9.8
-Stable tag: 9.1.0
+Tested up to: 5.1.1
+Stable tag: 9.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,14 @@ To learn more about the plugin, visit the [Plugin page](http://www.joanmiquelvia
 
 
 == Changelog ==
+= 9.1.2 =
+* Update error correction
+
+= 9.1.1 = 
+* Correction admin URL in ajax calls for non standard wp installations
+* Tested up wp 5.1.1
+* Also tested with theme Twenty Nineteen
+
 = 9.1.0 = 
 * New plugin settings for supporting different WP comments form HTML structure types
 * Adding javascript methods based on HTML queries (instead of just ID attributes) for inserting reCAPTCHA plugin

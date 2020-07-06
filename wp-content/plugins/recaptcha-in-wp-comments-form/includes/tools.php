@@ -265,7 +265,6 @@ class griwpc_tools extends griwpc_interface {
 	static function on_activation() {
 		add_option ('cool-griwpc', 'installed' );
 	}
-
 	
 	// To create the activation message
 	public function on_activation_msg () {

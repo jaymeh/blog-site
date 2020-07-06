@@ -8,7 +8,7 @@
  
 /*
  * Class:       griwpc_recaptcha
- * Version:     9.1.0
+ * Version:     9.1.1
  * Description: This class shows and controls the reCAPTCHA field in WP comments form 
  */
 
@@ -61,7 +61,8 @@ class griwpc_recaptcha extends griwpc_interface {
 		$defs = $this->settingsClass->get_defaults();
 
 		$translation_array = array(
-			'ajax_url' 			=> get_bloginfo('url' ),
+			
+			'ajax_url' 			=> get_admin_url(null, 'admin-ajax.php'),
 
 			'standardQueries'	=> ( isset ( $this->options['standardQueries'] ) ? $this->options['standardQueries']  	: $defs['standardQueries'] ),							   
 

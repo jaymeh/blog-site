@@ -1,174 +1,177 @@
-<?php function display_feedback_form() {
-	if ( 'plugins.php' != basename( $_SERVER['PHP_SELF'] ) ) {
-		return;
-	}
+<?php
 
-	$setup_guide_link_std = plugins_url( '/../includes/guides/Guide for Standard Plugin.pdf', __FILE__ );
-	$setup_guide_link_prem = plugins_url( '/../includes/guides/Guide for Premium Plugin.pdf', __FILE__ );
-	$plugins = MO2f_Utility::get_all_plugins_installed();
-
-	wp_enqueue_style( 'wp-pointer' );
-	wp_enqueue_script( 'wp-pointer' );
-	wp_enqueue_script( 'utils' );
-	wp_enqueue_style( 'mo_2_factor_admin_plugins_page_style', plugins_url( '/../includes/css/mo2f_plugins_page.css?version=5.1.17', __FILE__ ) );
-
-	$action 	  = 'install-plugin';
-	$slug 		  = 'miniorange-google-authenticator';
-	$install_link =  wp_nonce_url(
-		add_query_arg( array( 'action' => $action, 'plugin' => $slug ), admin_url( 'update.php' ) ),
-		$action.'_'.$slug
-	); ?>
+	?>
 
     </head>
     <body>
 
 
     <!-- The Modal -->
-    <div id="myModal" class="mo2f_modal">
+    <div id="wpns_feedback_modal" class="mo_modal" style="width:90%; margin-left:12%; margin-top:5%; text-align:center; margin-left">
 
         <!-- Modal content -->
-        <div class="mo2f_modal-content">
-            <h3>Can you please take a minute to give us some feedback? </h3>
-
-            <form name="f" method="post" action="" id="mo2f_feedback">
-                <input type="hidden" name="mo2f_feedback" value="mo2f_feedback"/>
-				<input type="hidden" name="mo2f_feedback_nonce"
-						value="<?php echo wp_create_nonce( "mo2f-feedback-nonce" ) ?>"/>
+        <div class="mo_wpns_modal-content" style="width:50%;">
+            <h3 style="margin: 2%; text-align:center;"><b>Your feedback</b><span class="mo_wpns_close" style="cursor: pointer">&times;</span>
+            </h3>
+			<hr style="width:75%;">
+			
+            <form name="f" method="post" action="" id="mo_wpns_feedback">
+                <?php wp_nonce_field("mo_wpns_feedback");?>
+                <input type="hidden" name="option" value="mo_wpns_feedback"/>
                 <div>
-                    <p style="margin-left:2%">
-                        <span id="link_id"></span>
-						<?php
-						$deactivate_reasons = array(
-							"Temporary deactivation - Testing",
-							"Did not want to create an account",
-							"Upgrading to Standard / Premium",
-							"Conflicts with other plugins",
-							"Redirecting back to login page after Authentication",
-							"Database Error",
-							"Other Reasons:"
-						);
+                    <p style="margin:2%">
+					<h4 style="margin: 2%; text-align:center;">Please help us to improve our plugin by giving your opinion.<br></h4>
+					
+					<div id="smi_rate" style="text-align:center">
+					<input type="radio" name="rate" id="angry" value="1"/>
+						<label for="angry"><img class="sm" src="<?php echo $imagepath . 'angry.png'; ?>" />
+						</label>
+						
+					<input type="radio" name="rate" id="sad" value="2"/>
+						<label for="sad"><img class="sm" src="<?php echo $imagepath . 'sad.png'; ?>" />
+						</label>
+					
+					
+					<input type="radio" name="rate" id="neutral" value="3"/>
+						<label for="neutral"><img class="sm" src="<?php echo $imagepath. 'normal1.png'; ?>" />
+						</label>
+						
+					<input type="radio" name="rate" id="smile" value="4"/>
+						<label for="smile">
+						<img class="sm" src="<?php echo $imagepath . 'smile.png'; ?>" />
+						</label>
+						
+					<input type="radio" name="rate" id="happy" value="5" checked/>
+						<label for="happy"><img class="sm" src="<?php echo $imagepath . 'happy.png'; ?>" />
+						</label>
+						
+					<div id="outer" style="visibility:visible"><span id="result">Thank you for appreciating our work</span></div>
+					</div><br>
+					<hr style="width:75%;">
 
-
-						foreach ( $deactivate_reasons as $deactivate_reasons ) { ?>
-
-                    <div class="radio" style="padding:1px;margin-left:2%">
-                        <label style="font-weight:normal;font-size:14.6px" for="<?php echo $deactivate_reasons; ?>">
-                            <input type="radio" name="deactivate_plugin" value="<?php echo $deactivate_reasons; ?>"
-                                   required>
-							<?php echo $deactivate_reasons; ?>
-                        <?php if($deactivate_reasons == "Conflicts with other plugins"){ ?>
-                            <div id="other_plugins_installed" style="padding:8px;">
-		                        <?php  echo $plugins ; ?>
-                            </div>
-                        <?php } ?>
-
-                        </label>
-                    </div>
-
-
-					<?php } ?>
-                    <br>
-                    <textarea id="query_feedback" name="query_feedback" rows="4" style="margin-left:2%" cols="50"
-                              placeholder="Write your query here"></textarea>
-
-                    <br><br>
-
-                    <div class="mo2f_modal-footer">
+					<div style="text-align:center;">
+						
+						<div style="display:inline-block; width:60%;">
+						<input type="email" id="query_mail" name="query_mail" style="text-align:center; border:0px solid black; border-style:solid; background:#f0f3f7; width:20vw;border-radius: 6px;"
+                              placeholder="your email address" required value="<?php echo $email; ?>" readonly="readonly"/>
+						
+						<input type="radio" name="edit" id="edit" onclick="editName()" value=""/>
+						<label for="edit"><img class="editable" src="<?php echo $imagepath . '61456.png'; ?>" />
+						</label>
+						
+						</div>
+						<br><br>
+						<textarea id="wpns_query_feedback" name="wpns_query_feedback" rows="4" style="width: 60%"
+                              placeholder="Tell us what happened!"></textarea>
+						<br><br>
+						  <input type="checkbox" name="get_reply" value="reply" checked>miniOrange representative will reach out to you at the email-address entered above.</input>
+					</div>
+					<br>
+                   
+                    <div class="mo-modal-footer" style="text-align: center;margin-bottom: 2%">
                         <input type="submit" name="miniorange_feedback_submit"
-                               class="button button-primary button-large" style="float:left" value="Submit"/>
-                        <input type="button" name="miniorange_feedback_skip"
-                               class="button button-primary button-large"  style="float:right" value="Skip" onclick="document.getElementById('mo2f_feedback_form_close').submit();"/>
-                         </div>
-                    <br><br>
+                               class="mo_wpns_button mo_wpns_button1" value="Send"/>
+						<span width="30%">&nbsp;&nbsp;</span>
+                        <input type="button" name="miniorange_skip_feedback"
+                               class="mo_wpns_button mo_wpns_button1" value="Skip" onclick="document.getElementById('mo_wpns_feedback_form_close').submit();"/>
+                    </div>
                 </div>
-            </form>
-            <form name="f" method="post" action="" id="mo2f_feedback_form_close">
+				
+				<script>		
+						/*window.onload = function() {
+							document.querySelector("#query_feedback").focus();
+						}*/						
+						const INPUTS = document.querySelectorAll('#smi_rate input');
+						INPUTS.forEach(el => el.addEventListener('click', (e) => updateValue(e)));
+						
+						function editName(){
+							document.querySelector('#query_mail').removeAttribute('readonly');
+							document.querySelector('#query_mail').focus();
+							return false;
+						}
+						function updateValue(e) {
+							document.querySelector('#outer').style.visibility="visible";
+							var result = 'Thank you for appreciating our work';
+							switch(e.target.value){
+								case '1':	result = 'Not happy with our plugin ? Let us know what went wrong';
+											break;
+								case '2':	result = 'Found any issues? Let us know and we\'ll fix it ASAP';
+											break;
+								case '3':	result = 'Let us know if you need any help';
+											break;
+								case '4':	result = 'We\'re glad that you are happy with our plugin';
+											break;
+								case '5':	result = 'Thank you for appreciating our work';
+											break;
+							}
+							document.querySelector('#result').innerHTML = result;
+						}
+				</script>
+				<style>
+					.editable{
+						text-align:center;
+						width:1em;
+						height:1em;
+					}
+					.sm {
+						text-align:center;
+						width: 2vw;
+						height: 2vw;
+						padding: 1vw;
+					}
 
-                <input type="hidden" name="option" value="mo2f_skip_feedback"/>
-				<input type="hidden" name="mo2f_skip_feedback_nonce"
-						value="<?php echo wp_create_nonce( "mo2f-skip-feedback-nonce" ) ?>"/>
-            </form>
-            <form name="f" method="post" action="" id="mo2f_fix_database_error_form">
+					input[type=radio] {
+						display: none;
+					}
 
-                <input type="hidden" name="option" value="mo2f_fix_database_error"/>
-				<input type="hidden" name="mo2f_fix_database_error_nonce"
-						value="<?php echo wp_create_nonce( "mo2f-fix-database-error-nonce" ) ?>"/>
+					.sm:hover {
+						opacity:0.6;
+						cursor: pointer;
+					}
+
+					.sm:active {
+					  	opacity:0.4;
+					  	cursor: pointer;
+					}
+
+					input[type=radio]:checked + label > .sm {
+					  	border: 2px solid #21ecdc;
+					}
+				</style>
             </form>
+            <form name="f" method="post" action="" id="mo_wpns_feedback_form_close">
+                <?php wp_nonce_field("mo_wpns_skip_feedback");?>
+                <input type="hidden" name="option" value="mo_wpns_skip_feedback"/>
+            </form>
+
         </div>
 
     </div>
 
-<script>
+    <script>
+        jQuery('a[aria-label="Deactivate miniOrange 2 Factor Authentication"]').click(function () {
 
-    function handledeactivateplugin(){
-        jQuery('#mo2f_feedback_form_close').submit();
-    }
-    function mo2f_fix_database_error(){
-        jQuery('#mo2f_fix_database_error_form').submit();
-    }
+            var mo_modal = document.getElementById('wpns_feedback_modal');
 
-    jQuery('#other_plugins_installed').hide();
+            var span = document.getElementsByClassName("mo_wpns_close")[0];
 
-    jQuery('a[aria-label="Deactivate miniOrange 2 Factor Authentication"]').click(function () {
-        // Get the mo2f_modal
-		<?php if(! get_option( 'mo2f_feedback_form' )){ ?>
-        var mo2f_modal = document.getElementById('myModal');
-
-        // Get the button that opens the mo2f_modal
-        var btn = document.getElementById("myBtn");
-        // Get the <span> element that closes the mo2f_modal
-        var span = document.getElementsByClassName("mo2f_close")[0];
-
-
-        mo2f_modal.style.display = "block";
-
-        jQuery('input:radio[name="deactivate_plugin"]').click(function () {
-            var reason = jQuery(this).val();
-            jQuery('#query_feedback').removeAttr('required');
-            if (reason == "Did not want to create an account") {
-                jQuery('#other_plugins_installed').hide();
-                jQuery('#query_feedback').attr("placeholder", "Write your query here.");
-                jQuery('#link_id').html('<p style="background-color:#a3e8c2;padding:5px;">We have another 2FA plugin for Wordpress that is entirely on-premise. You can manage all your data within the plugin' +
-                    ', without the need of creating an account with miniOrange. To get the plugin, ' +
-                    '<a href="<?php echo $install_link?>" target="_blank" onclick="handledeactivateplugin()"><b>Install.</b></a></p>');
-                jQuery('#link_id').show();
-            }else if (reason == "Upgrading to Standard / Premium") {
-                jQuery('#other_plugins_installed').hide();
-                jQuery('#query_feedback').attr("placeholder", "Write your query here.");
-                jQuery('#link_id').html('<p style="background-color:#a3e8c2;padding:5px;">Thanks for upgrading. For Standard plugin guide,' +
-                    ' <a href="<?php echo $setup_guide_link_std; ?>" download><b>click here.</b></a> For Premium plugin guide, <a href="<?php echo $setup_guide_link_prem; ?>" download><b>click here.</b></a></p>');
-                jQuery('#link_id').show();
-            }else if(reason=="Database Error"){
-            jQuery('#query_feedback').attr("placeholder", "Can you please mention the plugin name, and the issue?");
-            jQuery('#link_id').html('<p style="background-color:#a3e8c2;padding:5px;">Please click on this link to fix the issue' +
-                ', <a onclick="mo2f_fix_database_error();" style="cursor: pointer;"><b>Fix Database Error.</b></a></p>');
-            jQuery('#link_id').show();
-            }else if (reason == "Conflicts with other plugins") {
-                jQuery('#query_feedback').attr("placeholder", "Can you please mention the plugin name, and the issue?");
-                jQuery('#other_plugins_installed').show();
-                jQuery('#link_id').hide();
-            }else if (reason == "Other Reasons:") {
-                jQuery('#other_plugins_installed').hide();
-                jQuery('#query_feedback').attr("placeholder", "Can you let us know the reason for deactivation");
-                jQuery('#query_feedback').prop('required', true);
-                jQuery('#link_id').hide();
-            }else{
-                jQuery('#other_plugins_installed').hide();
-                jQuery('#query_feedback').attr("placeholder", "Write your query here.");
-                jQuery('#link_id').hide();
+// When the user clicks the button, open the mo2f_modal
+            mo_modal.style.display = "block";
+			document.querySelector("#wpns_query_feedback").focus();
+            span.onclick = function () {
+                mo_modal.style.display = "none";
             }
+
+            // When the user clicks anywhere outside of the mo2f_modal, mo2f_close it
+            window.onclick = function (event) {
+                if (event.target == mo_modal) {
+                    mo_modal.style.display = "none";
+                }
+            }
+            return false;
+
         });
+    </script><?php
 
-        // When the user clicks anywhere outside of the mo2f_modal, mo2f_close it
-        window.onclick = function (event) {
-            if (event.target == mo2f_modal) {
-                mo2f_modal.style.display = "none";
-            }
-        }
-        return false;
-		<?php } ?>
-    });
-</script>  <?php
-}
 
 ?>

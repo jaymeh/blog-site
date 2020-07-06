@@ -7,7 +7,7 @@
 
 /* 
  * Module:      Recaptcha functions for init form and verify responses
- * Version:     0.0.9.0.2
+ * Version:     9.1.1
  * Description: This module changes the HTML structure of the form when it's displayed for prevent automatic sending, then it verifies the user's response and when
  *              the user's response is correct it rewrites the HTML structure of the form.
  */
@@ -89,7 +89,7 @@ var griwpcProcessAjaxResponse = function( ajaxResponse ) {
 }
 
 var griwpcVerifyCallback = function( griwpcr ) {
-	GriwpcAjax.post ( griwpco.ajax_url + '/wp-admin/admin-ajax.php', { 'action' : 'griwpc_verify_recaptcha', 'resp' : griwpcr }, griwpcProcessAjaxResponse, true );
+	GriwpcAjax.post ( griwpco.ajax_url, { 'action' : 'griwpc_verify_recaptcha', 'resp' : griwpcr }, griwpcProcessAjaxResponse, true );
 }
 
 

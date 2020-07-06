@@ -40,7 +40,7 @@ body.login div#login div#login_error1 {
 }
 
 input.button-add {
-    background: #00a0d2 url(../../includes/images/mo_white_logo.png) no-repeat 10px center !important;
+    background: #00a0d2  no-repeat 10px center !important;
     background-size: 16px !important;
     border-color: #00a0d2;
     border-width: 0px;

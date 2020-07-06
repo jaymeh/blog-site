@@ -14,7 +14,7 @@ class Red_Csv_File extends Red_FileIO {
 	}
 
 	public function get_data( array $items, array $groups ) {
-		$lines[] = implode( ',', array( 'source', 'target', 'regex', 'type', 'code', 'match', 'hits', 'title' ) );
+		$lines = [ implode( ',', array( 'source', 'target', 'regex', 'type', 'code', 'match', 'hits', 'title' ) ) ];
 
 		foreach ( $items as $line ) {
 			$lines[] = $this->item_as_csv( $line );
@@ -39,7 +39,7 @@ class Red_Csv_File extends Red_FileIO {
 		);
 
 		$csv = array_map( array( $this, 'escape_csv' ), $csv );
-		return join( $csv, ',' );
+		return implode( ',', $csv );
 	}
 
 	public function escape_csv( $item ) {
@@ -53,17 +53,31 @@ class Red_Csv_File extends Red_FileIO {
 
 		ini_set( 'auto_detect_line_endings', false );
 
+		$count = 0;
 		if ( $file ) {
-			return $this->load_from_file( $group, $file );
+			$separators = [
+				',',
+				';',
+				'|',
+			];
+
+			foreach ( $separators as $separator ) {
+				fseek( $file, 0 );
+				$count = $this->load_from_file( $group, $file, $separator );
+
+				if ( $count > 0 ) {
+					return $count;
+				}
+			}
 		}
 
 		return 0;
 	}
 
-	public function load_from_file( $group_id, $file ) {
+	public function load_from_file( $group_id, $file, $separator ) {
 		$count = 0;
 
-		while ( ( $csv = fgetcsv( $file, 5000, ',' ) ) ) {
+		while ( ( $csv = fgetcsv( $file, 5000, $separator ) ) ) {
 			$item = $this->csv_as_item( $csv, $group_id );
 
 			if ( $item ) {

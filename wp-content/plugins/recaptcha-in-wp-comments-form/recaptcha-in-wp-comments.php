@@ -3,7 +3,7 @@
 Plugin Name:	reCAPTCHA in WP comments form
 Plugin URI:  	http://www.joanmiquelviade.com/plugin/google-recaptcha-in-wp-comments-form/
 Description:	reCAPTCHA in WP comments form plugin is an ANTISPAM tool that adds a Google reCAPTCHA field inside the comments form of your WP theme when the user is not logged in so that, it protects your site from the spammers. Additionaly, in case of that any spam robot or user manually breaks reCAPTCHA field, the plugin introduces a second verification process that allows you to decide what you want to do with those comments.
-Version: 		9.1.0
+Version: 		9.1.2
 Author:			Joan Miquel Viad&eacute;
 Author URI:		http://www.joanmiquelviade.com
 License: 		GPL2

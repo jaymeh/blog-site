@@ -30,7 +30,8 @@ class griwpc_settings {
 		
 	}
 
-	function  current_screen () {
+	function  current_screen ( $screen ) {
+	    if ( $screen->base != 'settings_page_google_recaptcha_in_wp_comments_settings' ) return;
 		$this->msgs = griwpc_messages::get_settings_strings_array();
 	}
 	
@@ -84,27 +85,27 @@ class griwpc_settings {
 	public function settings_sanitize_function_callback ( $input ) {
 		
 		$input = wp_parse_args( $input, $this->get_defaults() );
-		
+
+		$msgs 	 = griwpc_messages::get_settings_strings_array();
 	 	if ( count ( $input ) ) {
-			
+
 			add_settings_error(
 				'saving_plugin_options', 
 				'settings_updated', 
 				// Avoid the forced <strong></strong> tag in settings messages
-				'</strong>' . $this->msgs['adminNoticeSaved'] . '<strong>', 
+				'</strong>' . $msgs['adminNoticeSaved'] . '<strong>', 
 				'updated'
 			);
 		}
 		
 		if ( griwpc_tools::check_google_API_keys_pair( $input ) === FALSE ) {
 			
-			$strings	= griwpc_messages::get_screen_strings_array();
-		
+			$strings = griwpc_messages::get_screen_strings_array();
 			add_settings_error(
 				'empty_reCAPTCHA_API_Keys_pair',
 				'settings_updated',
 				// Avoid the forced <strong></strong> tag in settings messages
-				'</strong>' . sprintf ( $this->msgs['invalidGoogleRecaptchaPair'], $strings['googleKeysPair'] ) . '<strong>',
+				'</strong>' . sprintf ( $msgs['invalidGoogleRecaptchaPair'], $strings['googleKeysPair'] ) . '<strong>',
 				'error'
 			);
 			

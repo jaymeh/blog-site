@@ -1,54 +1,123 @@
-=== Google Authenticator - WordPress Two Factor Authentication (2FA) ===
+﻿=== Google Authenticator - WordPress Two Factor Authentication (2FA , MFA) ===
+
 Contributors: cyberlord92, twofactor
-Tags: google authenticator, two factor authentication, two factor, 2FA, TFA, 2 factor authentication, two step verification, 1 google authenticator, login, authy, authy two factor, Clef, 2 Factor, yubico, Two-Factor Authentication, Mobile Authentication, otp, strong authentication, 2 step authentication, smartphone authentication, Multifactor authentication, multi factor authentication, multi factor, no password, passwordless login, security, website security, one time passcode, password, soft token, woocommerce, authenticate, two factor auth, two-factor, duo, QR Code, QR Code Authentication, scan QR Code, wordfence, login security, google authenticator, google , email verification, trusted device, device Id , KBA , knowledge based authentication
+Tags: google authenticator, two factor authentication, two factor, 2FA,two-step verification, mobile verification,OTP, two-step verification, mobile verification,two factor,Two step verification, 2FA, TFA, MFA, 2 factor authentication, Remember Device, OTP,WordPress otp, two step authentication,Clef,SMS, email, signup security, two factor auth, Mobile Authentication, strong authentication, 2 step authentication, mobile verification,Multifactor authentication, passwordless login, one time passcode, soft token Authentication, QR Code Authentication, email verification, KBA, Security Questions,2FA, login OTP, login with SMS, mobile login, phone login, OTP login, mobile verification,knowledge based authentication,authy, authy two factor,yubico,Two-Factor Authentication,WordPress otp, security,user security, ​Twilio WordPress, SMS gateway, Solutions Infini, Clickatell, BulkSMS, MSG91, Nexmo, SMS Country, message, woocommerce, website security, login security, multi factor authentication, multi factor,wordfence, IP Blocking, IP Whitelisting, login Audits, woocommerce, SMS login, passwordless login, auth, login with OTP WordPress,  OTP, two-step authentication, Mobile Authentication,passwordless login, one time passcode, email verification, security, website security, login security, multi-factor authentication,, woocommerce, smartphone,WordPress otp, register with OTP, user OTP verification, SMS OTP, OTP Email, registration with OTP verification, registration verification,smartphone authentication
 Donate link: https://miniorange.com/
 Requires at least: 3.0.1
-Tested up to: 5.1
+Tested up to: 5.4
 Requires PHP: 5.3.0
-Stable tag: 5.1.17
+Stable tag: 5.4.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Easy 2FA setup with Google/Authy/LastPass Authenticator & other 2FA methods. Supports Google Authenticator, QR Code, Push Notification, Soft Token and Security Questions(KBA).
+Simple & Easy 2FA setup with any App supporting TOTP algorithm like Google, Authy, LastPass Authenticator & other 2FA methods. Supports Google Authenticator, QR Code, Push Notification, Soft Token and Security Questions.
 
 == Description ==
 
-**Note: The plugin is GDPR Compliant and supports Language Translation**
+**Note: The plugin is GDPR Compliant and supports wide variety of Language Translation**
 
-Secure your WordPress login with an additional layer of security from us! The setup takes minutes, yet protects your site forever.
-This plugin provides two factor authentication (TFA) during login. If you are looking for OTP Verification of users during <b>Registration</b> then we have a separate plugin for this. <a href="https://wordpress.org/plugins/miniorange-otp-verification/"> Click Here </a> to learn more.
+Have a completely Secure login to your WordPress website using this FREE, Simple & very easy to setup plugin. It provides two factor authentication (2FA, MFA) whenever login to your WordPress website ensuring no unauthorised access to your website.
 
-<h4>Free Plugin Features</h4>
+<h4>Supports variety of WordPress forms and plugins</h4>
+* Woocommerce : <a href="https://wordpress.org/plugins/woocommerce/">Woocommerce</a>
+* BuddyPress : <a href="https://wordpress.org/plugins/buddypress/">BuddyPress</a>
+* bbpress : <a href="https://wordpress.org/plugins/bbpress/">bbPress</a>
 
-* Two Factor Authentication (2FA) for **1 User** forever
-* **Available Authentication Methods:** Google/Authy/LastPass Authenticator, QR Code, Push Notification, Soft Token and Security Questions(KBA)
-* Language Translation Support
+* Ultimate Member – User Profile & Membership Form : <a href="https://wordpress.org/plugins/ultimate-member/">Ultimate Member – User Profile & Membership Form</a>
+* Restrict Content Pro Form : <a href="https://wordpress.org/plugins/restrict-content/">Restrict Content Form</a>
+* My theme Login Form :<a href="https://wordpress.org/plugins/theme-my-login/">My theme Login Form</a>
+* User Registration – Custom Registration Form : <a href="https://wordpress.org/plugins/user-registration/">User Registration – Custom Registration Form</a>
+* Custom Login Page Customizer Form :<a href="https://wordpress.org/plugins/loginpress/">Custom Login Page Customizer Form</a>
+* Admin Custom Login Form : <a href="https://wordpress.org/plugins/admin-custom-login/">Admin Custom Login Form</a>
+* RegistrationMagic – Custom Registration Forms : <a href="https://wordpress.org/plugins/custom-registration-form-builder-with-submission-manager/">RegistrationMagic – Custom Registration Forms</a>
+ and more.
+
+<h4>Prevent Account Sharing Between Users</h4>
+Many video sharing and E-learning platforms want to prevent sharing of account between the users. This can be done using miniOrange Two factor plugin. Also, e-learning portals can use this to their advantage. It can be used on any websites which create and sell courses. It can be integrated with plugins like Learndash.
+Other sites like premium video content or any premium content where you want users not to share passwords between friends and Family then you can go for this solution.
+
+<h4>FREE Plugin Features</h4>
+* Simplified & easy to user interface.
+* Two Factor Authentication (2FA) for **3 User** forever FREE!
+* **Variety of Authentication Methods:** Any App supporting TOTP algorithm like Google, Authy, LastPass Authenticator, QR Code, Push Notification, Soft Token and Security Questions(KBA)
+* Includes Language Translation Support. Supports a wide variety of languages
+* Passwordless login or login with phone number
+* This plugin Supports standard TOTP + HOTP protocols for Authentication Methods.
 * Two Factor Authentication (2FA) allows authentication on login page itself for Google Authenticator & miniOrange Soft Token.
+* Brute force attack prevention & IP Blocking.
+* User login Monitorning.
 
 <h4>Standard Plugin Features</h4>
 
 * Two Factor Authentication (2FA) for Users as per the upgrade *( User-based pricing )*
-* **Available Authentication Methods:** Google/Authy/LastPass Authenticator, QR Code, Push Notification, Soft Token, Security Questions(KBA), OTP Over Email, OTP Over SMS, OTP Over SMS and Email, Email Verification. *( SMS credits need to be purchased as per the need)*
-* Language Translation Support
-* **Multiple Login Options:** Username + password + two-factor (or) Username + two-factor
+* **Available Authentication Methods:** Google, Authy, LastPass Authenticator, QR Code, Push Notification, Soft Token, Security Questions(KBA), OTP Over Email, OTP Over SMS, OTP Over SMS and Email, Email Verification. *( SMS credits need to be purchased as per the need)*
+* Includes language Translation Support. Supports wide variety of languages.
+* **Multiple Login Options:** Username + password + two-factor (or) Username + two-factor i.e. Passwordless login. [Guide](https://docs.miniorange.com/documentation/login-username-2nd-factor-2)
 * **Backup Method:** KBA(Security Questions)
-* Multi-Site Support
-* User role based redirection after Login, Custom Security Questions (KBA), Customize account name in Google Authenticator app
+* Multisite compatible.
+* User role based redirection after Login [Guide](https://docs.miniorange.com/documentation/custom-redirect-login-url), Customize account name in Google Authenticator app [Guide](https://docs.miniorange.com/documentation/google-authenticator-app-name)
+* Custom Security Questions (KBA) [Guide](https://docs.miniorange.com/documentation/custom-security-questions)
 
 <h4>Premium Plugin Features</h4>
 
 * Two Factor Authentication (2FA) for Users as per the upgrade *( User-based pricing )*
-* **Available Authentication Methods:** Google/Authy/LastPass Authenticator, QR Code, Push Notification, Soft Token, Security Questions(KBA), OTP Over Email, OTP Over SMS, OTP Over SMS and Email, Email Verification, Hardware Token. *( SMS and Email credits need to be purchased as per the need)*
+* **Available Authentication Methods:** Google, Authy, LastPass Authenticator, QR Code, Push Notification, Soft Token, Security Questions(KBA), OTP Over Email, OTP Over SMS, OTP Over SMS and Email, Email Verification, Hardware Token. *( SMS and Email credits need to be purchased as per the need)*
 * Language Translation Support
-* **Multiple Login Options:** Username + password + two-factor (or) Username + two-factor
+* **Multiple Login Options:** Username + password + two-factor (or) Username + two-factor i.e. Passwordless login [Guide](https://docs.miniorange.com/documentation/login-username-2nd-factor-2)
+* **Backup Methods:** KBA(Security Questions), OTP Over Email, Backup Codes [Guide](https://docs.miniorange.com/documentation/want-configure-backup-methods-users-can-configure-case-locked-site-not-able-log)
+* Multisite compatible.
+* Force Two factor for users [Guide](https://docs.miniorange.com/documentation/enforce-2fa-users)
+* Email notification to users asking them to set up Two Factor Authentication (2FA) [Guide](https://docs.miniorange.com/documentation/want-send-email-notification-users-setting-2-factor).
+* User role based redirection after Login [Guide](https://docs.miniorange.com/documentation/custom-redirect-login-url), Custom Security Questions (KBA) [Guide](https://docs.miniorange.com/documentation/custom-security-questions), Customize account name in Google Authenticator app [Guide](https://docs.miniorange.com/documentation/google-authenticator-app-name).
+* Enable Two Factor Authentication (2FA) for specific Users/User Roles [Guide](https://docs.miniorange.com/documentation/enable-two-factor-based-roles)
+* Choose specific authentication methods for Users [Guide](https://docs.miniorange.com/documentation/specific-set-authentication-methods-based-role)
+* Set Privacy Policy for users [Guide](https://docs.miniorange.com/documentation/privacy-policy-site)
+* App Specific Password to login from mobile Apps
+* Remember Device [Guide](https://docs.miniorange.com/documentation/remember-my-device)
+* **Add-Ons Included:** RBA & Trusted Devices Management Add-on, Personalization Add-on and Short Codes Add-on
+
+<h4>Enterprise Plugin Features</h4>
+
+* Two Factor Authentication (2FA) for Users as per the upgrade *( User-based pricing )*
+* **Available Authentication Methods:** Google, Authy, LastPass Authenticator, QR Code, Push Notification, Soft Token, Security Questions(KBA), OTP Over Email, OTP Over SMS, OTP Over SMS and Email, Email Verification, Hardware Token. *( SMS and Email credits need to be purchased as per the need)*
+* Language Translation Support
+* **Multiple Login Options:** Username + password + two-factor (or) Username + two-factor i.e. Passwordless login.
 * **Backup Methods:** KBA(Security Questions), OTP Over Email, Backup Codes
-* Multi-Site Support
+* Multisite compatible.
 * Email notification to users asking them to set up Two Factor Authentication (2FA).
 * User role based redirection after Login, Custom Security Questions (KBA), Customize account name in Google Authenticator app.
 * Enable Two Factor Authentication (2FA) for specific Users/User Roles
 * Choose specific authentication methods for Users
 * App Specific Password to login from mobile Apps
 * **Add-Ons Included:** RBA & Trusted Devices Management Add-on, Personalization Add-on and Short Codes Add-on
+* **Brute force attack prevention, IP Blocking & User login Monitorning. **
+* File protection & strong password
+
+
+= Additional Features =
+* **Complete Web Security suite to protect wordpress from any attacks**
+* **Web Application Firewall (WAF) : Wordpress Firewall to protect your site**
+* **OWASP TOP 10 Protection**
+* **Login Protection : Spam and Login Protection**
+* **Malware scanner: Detects any virus, malware and trojan**
+* **Backup: Taking Encrypted Backup with local storage and cloud storage**
+* **Two Factor Authentication : 2FA and MFA**
+* **Limit Login Attempts to stop password guessing**
+* **Realtime Global IP Blocing**
+* **Limit Rate of Request : Protecting resources from any security hole exploit**
+* **Crawler Detection and blocking**
+* **Blocking IP and Attacks**
+* **Country Blocking and Browser Blocking**
+* **Brute Force Attacks prevention to stop password hack**
+* **Captcha for Bot Detection**
+* **Google Recaptcha**
+* **Login Form Protection**
+* **Registration Form Protection**
+* **Integration with different plugin - Woo commerce, buddypress, ultimate member and others**
+* **Reporting**
+* **Audit Log**
+
+Check all the features here: <a href="https://security.miniorange.com/" target="_blank">miniOrange Website</a>
 
 <h4>Why do you need to register?</h4>
 
@@ -61,13 +130,13 @@ Adding to this, you can also use the same account on multiple applications and y
  * Remember Device
  * Set Device Limit for the users to login
  * IP Restriction: Limit users to login from specific IPs
-* Personalization Add-on Features
+ * Personalization Add-on Features
  * Custom UI of Two Factor Authentication (2FA) popups
  * Custom Email and SMS Templates
  * Customize 'powered by' Logo
  * Customize Plugin Icon
  * Customize Plugin Name
- * Add Recaptcha on Login Page
+
 * Short Codes Add-on Features
  * Option to turn on/off 2-factor by user
  * Option to configure the Google Authenticator and Security Questions by user
@@ -78,6 +147,10 @@ Adding to this, you can also use the same account on multiple applications and y
 * miniOrange Authenticator App.
 * Google Authenticator App.
 * Authy 2-Factor Authentication App [STANDARD / PREMIUM FEATURE]
+
+<h4>Useful blog posts about two factor authenticaion plugin </h4>
+* <a href="https://themeisle.com/blog/how-to-add-two-factor-authentication-to-wordpress/">Beginner’s Guide: How to Add Two-Factor Authentication to WordPress</a>
+* <a href="https://phppot.com/wordpress/how-to-add-wordpress-two-factor-authentication-2fa-using-google-authenticator-plugin/">How to Add WordPress Two-Factor Authentication (2FA)</a>
 
 Customized solutions and Active support is available. Email us at info@miniorange.com or call us at +1 9786589387.
 
@@ -101,6 +174,8 @@ Customized solutions and Active support is available. Email us at info@miniorang
 
 <b>Video Guide</b>	:<br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vVGXjedIaGs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 
 == Frequently Asked Questions ==
 
@@ -208,7 +283,7 @@ You can login using our alternate login method. Please follow below steps to log
 
 You can login using our alternate login method. Click on the Forgot Phone link and you will get 2 alternate methods to login. Select "Send a one time passcode to my registered email" to authenticate by OTP over EMAIL or Select "Answer your Security Questions (KBA)" to authenticate by knowledge based authenticaion.
 
-= My phone has no internet connectivity and i am entering the one time passcode from miniOrange Authenticator App, it says Invalid OTP? =
+= My phone has no internet connectivity and i am entering the one time passcode from miniOrange Authenticator App, it says Invalid OTP?
 
 Click on the <b>Settings Icon</b> on top right corner in <b>miniOrange Authenticator App</b> and then press <b>Sync button</b> under 'Time correction for codes' to sync your time with miniOrange Servers. If you still can't logged in then please email us at info@miniorange.com or <a href="https://miniorange.com/contact" target="_blank">Contact us</a>.Soft Token method is just like google authenticator method.
 
@@ -231,6 +306,153 @@ miniOrange authentication service has 15+ authentication methods.One time passco
 3. 2 Factor Authentication prompt during Login.
 
 == Changelog ==
+
+= 5.4.8 =
+* Google Authenticator-Two Factor Authentication (2FA) : Learning Management System support, Microsoft Authenticator and Duo Authenticator support and restrict account sharing add-on.
+
+= 5.4.7 =
+* Google Authenticator-Two Factor Authentication (2FA) : Fixing warnings and adding minor changes in the plans.
+
+= 5.4.6 =
+* Google Authenticator-Two Factor Authentication (2FA) : Improving Google Authenticator and adding Payment options.
+
+= 5.4.5 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security and MFA UI updates.
+
+= 5.4.4 =
+* Google Authenticator-Two Factor Authentication (2FA) : Two Factor : Woocommerce login page integration.
+
+= 5.4.3 =
+* Google Authenticator-Two Factor Authentication (2FA , Two Factor) : Session issue fix for customers using Two Factor.
+
+= 5.4.2 =
+* Google Authenticator-Two Factor Authentication (2FA) : Warning for cloud customer moving to on-premise Two factor.
+
+= 5.4.1 =
+* Google Authenticator-Two Factor Authentication (2FA) : Headers sent issue is security firewall.
+
+= 5.4.0 =
+* Google Authenticator-Two Factor Authentication (2FA) : Two Factor FAQ Fix and OTP code convinence.
+
+= 5.3.26 =
+* Google Authenticator-Two Factor Authentication (2FA) : Two Factor On-premise FAQ update.
+
+= 5.3.25 =
+* Google Authenticator-Two Factor Authentication (2FA) : Two Factor On-premise support form.
+
+= 5.3.24 =
+* Google Authenticator-Two Factor Authentication (2FA) : On-premise two factor released with multiple users support for some authentication methods.
+
+= 5.3.23 =
+* Google Authenticator-Two Factor Authentication (2FA) : Scanner : Timing and caching issue fix.
+* Disable 2fa on Woocommerce login.
+* Login with Username only fix.
+
+= 5.3.22 =
+* Google Authenticator-Two Factor Authentication (2FA) : Antivirus : Fixing Cache issues and adding nonce.
+
+= 5.3.21 =
+* Google Authenticator-Two Factor Authentication (2FA) : Two Factor : Choice between Two factor and Security.
+
+= 5.3.20 =
+* Google Authenticator-Two Factor Authentication (2FA) : Anti Malware : Fixing issue faced by users during scan.
+
+= 5.3.19 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : Giving users choice of two factor.
+
+= 5.3.18 =
+* Google Authenticator-Two Factor Authentication (2FA) : Anti-Virus and Firewall : Fix Scan.
+
+= 5.3.17 =
+* Google Authenticator-Two Factor Authentication (2FA) : Anti-Virus : Improved Stop Scan.
+
+= 5.3.16 =
+* Google Authenticator-Two Factor Authentication (2FA) : Anti-Virus : Stop Scan.
+
+= 5.3.15 =
+* Google Authenticator-Two Factor Authentication (2FA) : Anti-Malware : schedule scan.
+
+= 5.3.14 =
+* Google Authenticator-Two Factor Authentication (2FA) : Anti-Malware : Adding more signatures.
+
+= 5.3.13 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : fix UI Issue and improving 2fa.
+
+= 5.3.12 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : backup table fix.
+
+= 5.3.11 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : Limiting Firewall, Malware, backup and login security for users not needing it.
+
+= 5.3.10 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : Moved to Old WAF version minor issues.
+
+= 5.3.9 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : Web application Firewall Sql Injections report and monitoring.
+
+
+= 5.3.8 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : Malware Scanner Fix.
+
+= 5.3.7 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : Two factor login with username fix.
+
+= 5.3.6 =
+* Google Authenticator-Two Factor Authentication (2FA) : Anti virus zip file fix.
+
+= 5.3.5 =
+* Google Authenticator-Two Factor Authentication (2FA) : Backup URL Fix and space issue in google authenticator.
+
+= 5.3.4 =
+* Google Authenticator-Two Factor Authentication (2FA) : CSS fix for Malware Scanner, Security and firewall.
+
+= 5.3.3 =
+* Google Authenticator-Two Factor Authentication (2FA) : Minor Malware Scanner issues fix.
+
+= 5.3.2 =
+* Google Authenticator-Two Factor Authentication (2FA) : File Changes.
+
+= 5.3.1 =
+* Google Authenticator-Two Factor Authentication (2FA) : Bug fix.
+
+= 5.3.0 =
+* Google Authenticator-Two Factor Authentication (2FA) : Releasing Firewall with Two Factor.
+
+= 5.2.6 =
+* Google Authenticator-Two Factor Authentication (2FA) : Fixed conflict and filter issues.
+
+= 5.2.5 =
+* Google Authenticator-Two Factor Authentication (2FA) : Some warnings in remote post.
+
+= 5.2.4 =
+* Google Authenticator-Two Factor Authentication (2FA) : Removed curl calls and unncessary files.
+
+= 5.2.3 =
+* Google Authenticator-Two Factor Authentication (2FA) : Fix for some users facing issues in api calls.
+
+= 5.2.2 =
+* Google Authenticator-Two Factor Authentication (2FA) : Adding File Protection and Strong Password feature.
+
+= 5.2.1 =
+* Google Authenticator-Two Factor Authentication (2FA) : UI changes for description.
+
+= 5.2.0 =
+* Google Authenticator-Two Factor Authentication (2FA) : UI changes with more description.
+
+= 5.1.22 =
+* Google Authenticator-Two Factor Authentication (2FA) : UI Fixes.
+
+= 5.1.21 =
+* Google Authenticator-Two Factor Authentication (2FA) : Login Redirect.
+
+= 5.1.20 =
+* Google Authenticator-Two Factor Authentication (2FA) : Minor Bug fix.
+
+= 5.1.19 =
+* Google Authenticator-Two Factor Authentication (2FA) : Adding basic Security Features Monitorning, IP blocking and login transaction report.
+
+= 5.1.18 =
+* Google Authenticator-Two Factor Authentication (2FA) : Object access error for lower PHP versions.
 
 = 5.1.17 =
 * Google Authenticator-Two Factor Authentication (2FA) : Minor Bug fix and Documentation changes.
@@ -402,25 +624,25 @@ miniOrange authentication service has 15+ authentication methods.One time passco
 * New User Interface for login.
 
 = 4.3.1 =
-* Google Authenticator-Two Factor Authentication (TFA): Compatible upto 4.7
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Compatible upto 4.7
 
 = 4.3.0 =
-* Google Authenticator-Two Factor Authentication (TFA): Updated miniOrange APIs.
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Updated miniOrange APIs.
 
 = 4.2.9 =
-* Google Authenticator-Two Factor Authentication (TFA): Tested upto WordPress 4.6.
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Tested upto WordPress 4.6.
 
 = 4.2.7 =
-* Google Authenticator-Two Factor Authentication (TFA): Session Warnig fix in the last version for some of the users.
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Session Warnig fix in the last version for some of the users.
 
 = 4.2.6 =
-* Google Authenticator-Two Factor Authentication (TFA): Compatible with wordpress caching.
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Compatible with wordpress caching.
 
 = 4.2.5 =
-* Google Authenticator-Two Factor Authentication (TFA): Improved the session handler.
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Improved the session handler.
 
 = 4.2.4 =
-* Google Authenticator-Two Factor Authentication (TFA): Updated faq for limit login attempt type of plugins.
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Updated faq for limit login attempt type of plugins.
 
 = 4.2.3 =
 * Google Authenticator-Two Factor Authentication ( 2FA ):
@@ -584,6 +806,150 @@ More descriptive setup messages and UI changes.
 
 == Upgrade Notice ==
 
+= 5.4.8 =
+* Google Authenticator-Two Factor Authentication (2FA) : Learning Management System support, Microsoft Authenticator and Duo Authenticator support and restrict account sharing add-on.
+
+= 5.4.7 =
+* Google Authenticator-Two Factor Authentication (2FA) : Fixing warnings and adding minor changes in the plans.
+
+= 5.4.6 =
+* Google Authenticator-Two Factor Authentication (2FA) : Improving Google Authenticator and adding Payment options.
+
+= 5.4.5 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security and MFA UI updates.
+
+= 5.4.4 =
+* Google Authenticator-Two Factor Authentication (2FA) : Two Factor : Woocommerce login page integration.
+
+= 5.4.3 =
+* Google Authenticator-Two Factor Authentication (2FA) : Session issue fix for customers using Two Factor.
+
+= 5.4.2 =
+* Google Authenticator-Two Factor Authentication (2FA) : Warning for cloud customer moving to on-premise Two factor
+
+= 5.4.0 =
+* Google Authenticator-Two Factor Authentication (2FA) : Two Factor FAQ Fix and OTP code convinence.
+
+= 5.3.26 =
+* Google Authenticator-Two Factor Authentication (2FA) : Two Factor On-premise FAQ update.
+
+= 5.3.25 =
+* Google Authenticator-Two Factor Authentication (2FA) : Two Factor On-premise support form.
+
+= 5.3.24 =
+* Google Authenticator-Two Factor Authentication (2FA) : On-premise two factor released with multiple user support for some authentication methods.
+
+= 5.3.23 =
+* Google Authenticator-Two Factor Authentication (2FA) : Scanner : Timing and caching issue fix.
+* Disable 2fa on Woocommerce login.
+* Login with Username only fix.
+
+= 5.3.22 =
+* Google Authenticator-Two Factor Authentication (2FA) : Antivirus : Fixing Cache issues and adding nonce.
+
+= 5.3.21 =
+* Google Authenticator-Two Factor Authentication (2FA) : Two Factor : Choice between Two factor and Security.
+
+= 5.3.20 =
+* Google Authenticator-Two Factor Authentication (2FA) : Anti Malware : Fixing issue faced by users during scan.
+
+= 5.3.19 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : Giving users choice of two factor.
+
+= 5.3.18 =
+* Google Authenticator-Two Factor Authentication (2FA) : Anti-Virus and Firewall : Fix Scan.
+
+= 5.3.17 =
+* Google Authenticator-Two Factor Authentication (2FA) : Anti-Virus : Improved Stop Scan.
+
+= 5.3.16 =
+* Google Authenticator-Two Factor Authentication (2FA) : Anti-Virus : Stop Scan.
+
+= 5.3.15 =
+* Google Authenticator-Two Factor Authentication (2FA) : Anti-Malware : schedule scan.
+
+= 5.3.14 =
+* Google Authenticator-Two Factor Authentication (2FA) : Anti-Malware : Adding more signatures.
+
+= 5.3.13 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : fix UI Issue and improving 2fa.
+
+= 5.3.12 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : backup table fix.
+
+= 5.3.11 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : Limiting Firewall, Malware, backup and login security for users not needing it.
+
+= 5.3.10 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : Moved to Old WAF version minor issues..
+
+= 5.3.9 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : Web application Firewall Sql Injections report and monitoring.
+
+
+= 5.3.8 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : Malware Scanner Fix.
+
+= 5.3.7 =
+* Google Authenticator-Two Factor Authentication (2FA) : Security : Two factor login with username fix.
+
+= 5.3.6 =
+* Google Authenticator-Two Factor Authentication (2FA) : Anti virus zip file fix.
+
+= 5.3.5 =
+* Google Authenticator-Two Factor Authentication (2FA) : Backup URL Fix and space issue in google authenticator.
+
+= 5.3.4 =
+* Google Authenticator-Two Factor Authentication (2FA) : CSS fix for Malware Scanner, Security and firewall.
+
+= 5.3.3 =
+* Google Authenticator-Two Factor Authentication (2FA) : Minor Malware Scanner issues fix.
+
+= 5.3.2 =
+* Google Authenticator-Two Factor Authentication (2FA) : File Changes.
+
+= 5.3.1 =
+* Google Authenticator-Two Factor Authentication (2FA) : Bug fix.
+
+= 5.3.0 =
+* Google Authenticator-Two Factor Authentication (2FA) : Releasing Firewall with Two Factor.
+
+= 5.2.6 =
+* Google Authenticator-Two Factor Authentication (2FA) : Fixed conflict and filter issues.
+
+= 5.2.5 =
+* Google Authenticator-Two Factor Authentication (2FA) : Some warnings in remote post.
+
+= 5.2.4 =
+* Google Authenticator-Two Factor Authentication (2FA) : Removed curl calls and unncessary files.
+
+= 5.2.3 =
+* Google Authenticator-Two Factor Authentication (2FA) : Fix for some users facing issues in api calls.
+
+= 5.2.2 =
+* Google Authenticator-Two Factor Authentication (2FA) : Adding File Protection and Strong Password feature.
+
+= 5.2.1 =
+* Google Authenticator-Two Factor Authentication (2FA) : UI changes for description.
+
+= 5.2.0 =
+* Google Authenticator-Two Factor Authentication (2FA) : UI changes with more description.
+
+= 5.1.22 =
+* Google Authenticator-Two Factor Authentication (2FA) : UI Fixes.
+
+= 5.1.21 =
+* Google Authenticator-Two Factor Authentication (2FA) : Login Redirect.
+
+= 5.1.20 =
+* Google Authenticator-Two Factor Authentication (2FA) : Minor Bug fix.
+
+= 5.1.19 =
+* Google Authenticator-Two Factor Authentication (2FA) : Adding basic Security Features Monitorning, IP blocking and login transaction report.
+
+= 5.1.18 =
+* Google Authenticator-Two Factor Authentication (2FA) : Object access error for lower PHP versions.
+
 = 5.1.17 =
 * Google Authenticator-Two Factor Authentication (2FA) : Minor Bug fix and Documentation changes.
 
@@ -718,34 +1084,34 @@ More descriptive setup messages and UI changes.
 * Google Authenticator-Two Factor Authentication (2FA) : Fixed the login flow for third party Apps that supports XML-RPC.
 
 = 4.4 =
-* Google Authenticator-Two Factor Authentication (2FA): 
+* Google Authenticator-Two Factor Authentication (2FA):
 * Note: This is very important update having altogether new UI and compatibility with Limit Login Attempts. After updating, please do not logout from your admin dashboard. Try to login from another browser and if you face any issue , please contact us at info@miniorange.com
 * Compatibility with Limit Login Attempts.
 * New User Interface for login.
 
 = 4.3.2 =
-* Google Authenticator-Two Factor Authentication (TFA): Revised licensing cost for users.
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Revised licensing cost for users.
 
 = 4.3.1 =
-* Google Authenticator-Two Factor Authentication (TFA): Compatible upto 4.7
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Compatible upto 4.7
 
 = 4.3.0 =
-* Google Authenticator-Two Factor Authentication (TFA): Updated miniOrange APIs.
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Updated miniOrange APIs.
 
 = 4.2.9 =
-* Google Authenticator-Two Factor Authentication (TFA): Tested upto WordPress 4.6.
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Tested upto WordPress 4.6.
 
 = 4.2.7 =
-* Google Authenticator-Two Factor Authentication (TFA): Session Warnig fix in the last version for some of the users.
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Session Warnig fix in the last version for some of the users.
 
 = 4.2.6 =
-* Google Authenticator-Two Factor Authentication (TFA): Compatible with wordpress caching.
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Compatible with wordpress caching.
 
 = 4.2.5 =
-* Google Authenticator-Two Factor Authentication (TFA): Improved the session handler.
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Improved the session handler.
 
 = 4.2.4 =
-* Google Authenticator-Two Factor Authentication (TFA): Updated faq for limit login attempt type of plugins.
+* Google Authenticator-Two Factor Authentication (2FA, MFA): Updated faq for limit login attempt type of plugins.
 
 = 4.2.3 =
 * Two Factor Authentication ( 2FA ):
@@ -763,31 +1129,31 @@ More descriptive setup messages and UI changes.
 * Two Factor Authentication ( 2FA ):
 * Mark as tested on Wordpress 4.5
 
-= 4.1.8 = 
+= 4.1.8 =
 * Two Factor Authentication ( 2FA ):
 * Changed the location of images used for demo. Now being loaded from the site having SSL certificate.
 
-= 4.1.7 = 
+= 4.1.7 =
 * Two Factor Authentication ( 2FA ):
 * Improved Error Handling for Remember Device.
 
-= 4.1.6 = 
+= 4.1.6 =
 * Two Factor Authentication ( 2FA ):
 * Licensing Plan Updated.
 
-= 4.1.5 = 
+= 4.1.5 =
 * Two Factor Authentication ( 2FA ):
 * Added Forgot Password functionality for miniOrange customer admin.
 * Added warning message for the users who are using lower version of php.
 * Added functionality to change the customer email.
 
-= 4.1.4 = 
+= 4.1.4 =
 * Two Factor Authentication ( 2FA ):
 * Added an option for admin to enable or disable login for XML-RPC supported applications.
 
 = 4.1.3 =
-* Two Factor Authentication ( 2FA ): 
-* Fixed CSS Conflict with the plugins in the admin dashboard. 
+* Two Factor Authentication ( 2FA ):
+* Fixed CSS Conflict with the plugins in the admin dashboard.
 * More intuitive UI for woocommerce login.
 * Tested front-end login with themes like wordpress default theme,
   customizr theme,zerif-lite theme,accesspress store theme,ishop theme and many more.
@@ -799,9 +1165,9 @@ More descriptive setup messages and UI changes.
 = 4.1.1 =
 * Two Factor Authentication ( 2FA ): Adding Validation in choosing Security Questions (KBA).
 
-= 4.1.0 = 
+= 4.1.0 =
 * Two Factor Authentication ( 2FA ): Features added.
-  multisite support 
+  multisite support
   Custom login redirection
   Authy 2-Factor Authentication as separate authentication method
 
@@ -853,12 +1219,12 @@ More descriptive setup messages and UI changes.
 * Two Factor Authentication ( 2FA ): Fix for 2FA ShortCode.
 
 = 3.0 =
-* Two Factor Authentication ( 2FA ): Features added 
+* Two Factor Authentication ( 2FA ): Features added
 * Google Authenticator.
 * Device Id (Remember device).
 * Choice given to admin to enable specific authentication methods for users.
 * Two Factor support for woocommerce theme.
-* Short Code for various customized fronted login. 
+* Short Code for various customized fronted login.
 * More intuitive UI and descriptive instructions.
 
 = 2.6 =
@@ -882,7 +1248,7 @@ More descriptive setup messages and UI changes.
 = 2.0 =
 * Two Factor Authentication ( 2FA ): Added login with password plus second factor feature.
 
-= 1.8 = 
+= 1.8 =
 * Two Factor Authentication ( 2FA ): Added feature of different login form choice,test authentication and help for configuration and setup.
 
 = 1.7 =
@@ -903,7 +1269,7 @@ More descriptive setup messages and UI changes.
 = 1.2 =
 * Two Factor Authentication ( 2FA ): Added 2 factor for all users along with forgot phone functionality.
 
-= 1.1 = 
+= 1.1 =
 * Two Factor Authentication ( 2FA ): Added email ID verification during registration.
 
 = 1.0.0 =
